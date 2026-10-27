@@ -1,4 +1,5 @@
 import unittest,tempfile,json
+from unittest.mock import patch
 from pathlib import Path
 from datetime import datetime,timedelta
 import numpy as np
@@ -6,6 +7,18 @@ from PIL import Image
 import scout as s
 
 class ScoutTests(unittest.TestCase):
+ def test_windows_status_lock_does_not_abort(self):
+  with tempfile.TemporaryDirectory() as td:
+   with patch.object(s,'_replace_status',side_effect=PermissionError('simulated WinError 5')):
+    self.assertTrue(s.state(td,status='running',frames=15))
+    self.assertTrue(s.state(td,status='complete',frames=30))
+   self.assertEqual(s.read_state(td)['frames'],30)
+   self.assertEqual(s.read_state(td)['status'],'complete')
+   self.assertEqual(len(list((Path(td)/'status_history').glob('*.json'))),2)
+ def test_legacy_status_read(self):
+  with tempfile.TemporaryDirectory() as td:
+   (Path(td)/'status.json').write_text('{"status":"error","frames":17565}')
+   self.assertEqual(s.read_state(td)['frames'],17565)
  def test_group_shared_across_cameras(self):
   self.assertEqual(s.split_for('A01_20260405010000.mp4',30),s.split_for('A03_20260405010020.mp4',10))
   self.assertEqual(s.split_for('A01_20260405010000.mp4',1),(None,None))
