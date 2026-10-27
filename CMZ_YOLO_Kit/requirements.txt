@@ -1,0 +1,6 @@
+numpy>=1.26,<3
+opencv-python-headless>=4.10,<5
+pillow>=10.4,<13
+pandas>=2.2,<3
+streamlit>=1.40,<2
+imageio-ffmpeg>=0.6,<1

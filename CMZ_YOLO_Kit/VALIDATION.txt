@@ -1,0 +1,9 @@
+Software validation, 27 October 2026
+
+4 automated tests passed: shared camera-time groups and edge exclusions; original name validation; label history and invalid box rejection; YOLO dataset/normalized coordinate export with unreviewed images excluded.
+
+Real local CCTV sample: sequential 1fps scan produced 12 frames for a 12-second test; original-resolution extraction returned 1920x1080; review contact-sheet ZIP created successfully. Streamlit AppTest: gallery and full-frame UI loaded without exceptions; uncertain label was saved and export succeeded. Temporary software-test labels are not included in the deliverable or treated as project ground truth.
+
+Environment: Linux Python3.12, OpenCV4.14, Streamlit1.66.1, imageio-ffmpeg0.6. Windows .bat launchers reviewed but not executed on Windows.
+
+YOLO training script compiled and its APIs checked against official documentation. No actual YOLO training or detector accuracy evaluation was run: reviewed civet boxes and adequate held-out data are still missing. Automatic trained-detector video search and Active/Inactive integration remain subsequent stages. No project results or GitHub URL are claimed.

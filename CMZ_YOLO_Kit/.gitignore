@@ -1,0 +1,9 @@
+.venv/
+.yolo_venv/
+workspace/
+training/
+test_history/
+__pycache__/
+*.pt
+*.mp4
+GPU_INFO.txt
