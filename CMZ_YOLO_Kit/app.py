@@ -13,7 +13,7 @@ runs=sorted(s.WORK.glob('scan_*'),reverse=True)
 run=st.sidebar.selectbox('Scan',runs,format_func=lambda p:p.name) if runs else None
 if st.sidebar.button('Refresh status / results'):st.rerun()
 if run:
- try:status=json.loads((run/'status.json').read_text(encoding='utf-8'));st.sidebar.json(status)
+ try:status=s.read_state(run);st.sidebar.json(status)
  except Exception:status={}
 else:status={}
 if page.startswith('1'):
@@ -44,6 +44,13 @@ elif page.startswith('2'):
  minimum=st.number_input('From clip second',min_value=0.,value=0.)
  maximum=st.number_input('Through clip second (0 = no limit)',min_value=0.,value=0.)
  names=st.multiselect('Source files',df.name.unique().tolist(),default=df.name.unique().tolist())
+ jump_source=st.selectbox('Jump source',df.name.unique().tolist())
+ jump_second=st.number_input('Jump directly to clip second',min_value=0.,value=0.,step=1.)
+ if st.button('Open frame at this second'):
+  choices=df[df.name==jump_source]
+  nearest=choices.loc[(choices.approx_second-jump_second).abs().idxmin()]
+  st.session_state['frame_id']=nearest.id
+  st.info(f'Opening nearest sampled frame: {nearest.approx_second:.1f}s')
  view=df[df.name.isin(names)&(df.approx_second>=minimum)]
  if maximum>0:view=view[view.approx_second<=maximum]
  if order.startswith('Highest'):
@@ -84,7 +91,7 @@ elif page.startswith('3'):
  st.write('After data review, use TRAIN_YOLO_WINDOWS.bat. It asks for the generated data.yaml path, checks GPU availability, trains YOLO11n, then evaluates a held-out detection test set once. Dependencies/weights may download on first use. See the Thai guide before installing YOLO.')
 else:
  st.write('Export review metadata. Include two overview images only if you want ChatGPT to inspect candidate frames. No original video is included.')
- include=st.checkbox('Include overview images (up to 24 uniform + 24 motion-priority samples)',value=True)
+ include=st.checkbox('Include overview images (up to 24 uniform + 24 motion-priority + 40 reviewed box images)',value=True)
  if st.button('Create review ZIP'):
   try:
    z=s.review_zip(run,include);st.download_button('Download REVIEW.zip',z.read_bytes(),file_name='CMZ_REVIEW.zip',mime='application/zip');st.success(str(z))

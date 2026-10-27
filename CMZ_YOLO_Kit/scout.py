@@ -12,8 +12,38 @@ WORK=ROOT/'workspace'
 def newrun():
  p=WORK/('scan_'+datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+uuid.uuid4().hex[:6]);p.mkdir(parents=True);return p
 
+def _replace_status(tmp, destination):
+ tmp.replace(destination)
+
 def state(run,**kw):
- p=Path(run);tmp=p/'status.tmp';tmp.write_text(json.dumps(kw,ensure_ascii=False),encoding='utf-8');tmp.replace(p/'status.json')
+ """Immutable status snapshots survive Windows sharing locks on status.json.
+ Progress reporting must not stop an otherwise readable video scan.
+ """
+ import time
+ p=Path(run);raw=json.dumps(kw,ensure_ascii=False)
+ try:
+  history=p/'status_history';history.mkdir(exist_ok=True)
+  snapshot=history/(f'{time.time_ns():020d}_'+uuid.uuid4().hex+'.json')
+  tmp=snapshot.with_suffix('.tmp');tmp.write_text(raw,encoding='utf-8');tmp.replace(snapshot)
+ except OSError as e:
+  print('Could not save status snapshot: '+str(e),file=sys.stderr)
+  return False
+ # Legacy status.json remains a best-effort compatibility copy only.
+ tmp=p/('status_'+uuid.uuid4().hex+'.tmp')
+ try:
+  tmp.write_text(raw,encoding='utf-8');_replace_status(tmp,p/'status.json')
+ except OSError as e:
+  print('Legacy status file busy; snapshot retained: '+str(e),file=sys.stderr)
+ return True
+
+def read_state(run):
+ p=Path(run)
+ for candidate in sorted((p/'status_history').glob('*.json'),reverse=True):
+  try:return json.loads(candidate.read_text(encoding='utf-8'))
+  except (OSError,ValueError):continue
+ try:return json.loads((p/'status.json').read_text(encoding='utf-8'))
+ except (OSError,ValueError):return {}
+
 
 def files(folder):
  p=Path(folder).expanduser()
@@ -131,11 +161,24 @@ def build(run):
 def review_zip(run,include_images=False):
  run=Path(run);dest=run/('REVIEW_'+uuid.uuid4().hex[:6]+'.zip');df=load(run)
  with zipfile.ZipFile(dest,'w',zipfile.ZIP_DEFLATED) as z:
-  z.writestr('status.json',(run/'status.json').read_bytes())
+  z.writestr('status.json',json.dumps(read_state(run),ensure_ascii=False))
   df['source']=df['name'];z.writestr('index.csv',df.to_csv(index=False))
   cleaned=labels(run)
   for v in cleaned.values():v['source']=v['name']
   z.writestr('annotations.json',json.dumps(cleaned,ensure_ascii=False,indent=2))
+  if include_images:
+   # Reviewed boxes can now be checked visually; never invent missing images.
+   from PIL import ImageDraw
+   for item in list(cleaned.values())[:40]:
+    src=run/'full'/(item['id']+'.jpg')
+    if not src.is_file():continue
+    im=Image.open(src).convert('RGB');box=item.get('box')
+    if box:
+     w,h=im.size;d=ImageDraw.Draw(im);d.rectangle((box[0]*w,box[1]*h,box[2]*w,box[3]*h),outline='red',width=4)
+    im.thumbnail((1280,720))
+    import io
+    buffer=io.BytesIO();im.save(buffer,format='JPEG',quality=90)
+    z.writestr('reviewed_boxes/'+item['id']+'.jpg',buffer.getvalue())
   if include_images:
    # Uniform temporal coverage and motion-priority coverage, clearly separate.
    uniform=df.iloc[np.linspace(0,len(df)-1,min(24,len(df)),dtype=int)] if len(df) else df
