@@ -48,6 +48,8 @@ def read_records(workspace):
     latest = {}
     for p in sorted((Path(workspace)/'phase2'/'annotations').glob('*.json')):
         doc = json.loads(p.read_text(encoding='utf-8'))
+        for previous in doc.get('supersedes', []):
+            latest.pop((str(previous[0]), float(previous[1]), float(previous[2])), None)
         for r in doc['observations']:
             r = normalize(r)
             latest[key(r)] = r
@@ -55,16 +57,34 @@ def read_records(workspace):
     validate_intervals(result)
     return sorted(result, key=key)
 
-def save_records(workspace, rows, event_group=None):
+def save_records(workspace, rows, event_group=None, supersedes=None):
     rows = [normalize(r, event_group) for r in rows]
     proposed = {key(r):r for r in read_records(workspace)}
+    supersedes = supersedes or []
+    for previous in supersedes:
+        previous = (str(previous[0]), float(previous[1]), float(previous[2]))
+        if previous not in proposed:
+            raise ValueError('The original interval changed. Reload before correcting it.')
+        del proposed[previous]
     proposed.update({key(r):r for r in rows})
     validate_intervals(list(proposed.values()))
     folder = Path(workspace)/'phase2'/'annotations'; folder.mkdir(parents=True, exist_ok=True)
     p = folder/(datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S_%f')+'_'+uuid.uuid4().hex[:6]+'.json')
     with p.open('x', encoding='utf-8') as f:
-        json.dump(dict(observations=rows, created_utc=datetime.now(timezone.utc).isoformat()), f, ensure_ascii=False, indent=2)
+        json.dump(dict(observations=rows, supersedes=supersedes, created_utc=datetime.now(timezone.utc).isoformat()), f, ensure_ascii=False, indent=2)
     return p
+
+def correct_interval(workspace, original, start, end, roi=None):
+    """Append a shorter replacement; preserve the original annotation file."""
+    if not original['start_second'] <= start < end <= original['end_second']:
+        raise ValueError('Choose a non-empty interval inside the original interval.')
+    updated=dict(original,start_second=start,end_second=end)
+    if roi is not None:updated['roi']=roi
+    return save_records(workspace,[updated],supersedes=[key(original)])
+
+def annotation_signature(rows):
+    selected=sorted((normalize(r) for r in rows if r['behavior'] in ACTIVITY),key=key)
+    return hashlib.sha256(json.dumps(selected,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
 def union_seconds(intervals):
     total = 0.; right = None
@@ -221,6 +241,7 @@ def train_pilot(workspace, rows, clocks_verified=False):
     metadata=dict(task='human-ROI motion-feature behavior pilot',model='RandomForest + Farneback optical flow',
                   trained=True,supported_classes=classes,unsupported_classes=[b for b in ACTIVITY if b not in classes],
                   training_clips=len(used),training_groups=sorted({groups[i] for i in used}),class_counts=counts,
+                  annotation_signature=annotation_signature(rows),
                   evaluation=metrics,evaluation_limitation=reason,automatic_activity_status_enabled=False,
                   note='ROI motion can confuse feeding, grooming and stillness. Unsupported behaviors are not validated. Proposals require human review.')
     joblib.dump(dict(model=model,metadata=metadata),folder/'behavior_pilot.joblib')
@@ -232,7 +253,10 @@ def propose(workspace, model_path, sample, roi):
     # UI only offers models produced by this app, never arbitrary uploaded pickle files.
     root=(Path(workspace)/'phase2').resolve();p=Path(model_path).resolve()
     if not p.is_relative_to(root) or p.name!='behavior_pilot.joblib':raise ValueError('Use a model created by this app.')
-    saved=joblib.load(p);feature=motion_features(sample['local_clip'],roi)
+    saved=joblib.load(p)
+    if saved['metadata'].get('annotation_signature') != annotation_signature(read_records(workspace)):
+        raise ValueError('This model predates the current annotations or lacks a dataset signature. Retrain after correcting the labels; the old model is retained as history.')
+    feature=motion_features(sample['local_clip'],roi)
     probabilities=saved['model'].predict_proba([feature])[0];i=int(probabilities.argmax())
     return dict(source=sample['source'],start_second=sample['start_second'],end_second=sample['end_second'],
                 proposed_behavior=str(saved['model'].classes_[i]),vote_fraction=float(probabilities[i]),

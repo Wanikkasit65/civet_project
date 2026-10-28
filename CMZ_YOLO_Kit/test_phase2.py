@@ -52,12 +52,27 @@ class Phase2Tests(unittest.TestCase):
         records=[c.normalize(row(start=5720+i*20,end=5730+i*20,label='Feeding' if i<3 else 'Walking',roi=[.1,.1,.9,.9],event_group='single-event')) for i in range(6)]
         catalog={c.key(r):dict(r,local_clip='synthetic') for r in records}
         with tempfile.TemporaryDirectory() as d,patch.object(c,'sample_catalog',return_value=catalog),patch.object(c,'motion_features',side_effect=lambda *a,**k:np.arange(18,dtype=float)):
+            c.save_records(d,records)
             folder,report=c.train_pilot(d,records,clocks_verified=True)
             self.assertTrue((folder/'behavior_pilot.joblib').is_file())
             self.assertTrue(report['trained']);self.assertIsNone(report['evaluation'])
             self.assertFalse(report['automatic_activity_status_enabled'])
             proposal=c.propose(d,folder/'behavior_pilot.joblib',dict(records[0],local_clip='synthetic'),[.1,.1,.9,.9])
             self.assertEqual(proposal['activity'],'Unknown');self.assertFalse(proposal['human_confirmed'])
+            c.correct_interval(d,records[0],records[0]['start_second']+1,records[0]['end_second']-1)
+            with self.assertRaisesRegex(ValueError,'predates'):
+                c.propose(d,folder/'behavior_pilot.joblib',dict(records[0],local_clip='synthetic'),[.1,.1,.9,.9])
+
+    def test_corrected_interval_replaces_count_without_editing_original(self):
+        with tempfile.TemporaryDirectory() as d:
+            original=c.normalize(row(start=5981.5,end=5991.5,label='Walking'))
+            saved=c.save_records(d,[original]);before=saved.read_bytes()
+            c.correct_interval(d,original,5985.5,5987.5)
+            current=c.read_records(d);self.assertEqual(len(current),1)
+            self.assertEqual(current[0]['end_second']-current[0]['start_second'],2)
+            self.assertEqual(saved.read_bytes(),before)
+            with self.assertRaises(ValueError):c.correct_interval(d,original,5985.5,5986.5)
+            with self.assertRaises(ValueError):c.correct_interval(d,current[0],5980,5995)
 
     def test_report_scope_and_path_redaction(self):
         with tempfile.TemporaryDirectory() as d:

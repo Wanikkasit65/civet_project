@@ -27,11 +27,12 @@ def preview(path):
     if not ok:raise ValueError('Cannot read this preview.')
     return cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
 
-def roi_controls(sample,ident):
-    st.video(sample['local_clip'])
+def roi_controls(sample,ident,show_video=True,initial=None):
+    if show_video:st.video(sample['local_clip'])
     st.caption('Crop around the whole animal and its movement throughout the chosen interval. Inspect the video; a middle-frame preview alone cannot establish this.')
-    left,right=st.slider('Left / right',0.,1.,(.15,.85),.005,key=ident+'x')
-    top,bottom=st.slider('Top / bottom',0.,1.,(.25,.98),.005,key=ident+'y')
+    initial=initial or [.15,.25,.85,.98]
+    left,right=st.slider('Left / right',0.,1.,(initial[0],initial[2]),.005,key=ident+'x')
+    top,bottom=st.slider('Top / bottom',0.,1.,(initial[1],initial[3]),.005,key=ident+'y')
     roi=[left,top,right,bottom]
     im=Image.fromarray(preview(sample['local_clip']));d=ImageDraw.Draw(im)
     d.rectangle([left*im.width,top*im.height,right*im.width-1,bottom*im.height-1],outline='red',width=2)
@@ -53,8 +54,24 @@ if page.startswith('1'):
 elif page.startswith('2'):
     catalog=c.sample_catalog(workspace)
     if not catalog:st.warning('No generated review clip folders found. Point the sidebar to the workspace used by AUTO_REVIEW.');st.stop()
-    mode=st.radio('Review mode',['Add a new labeled interval','Add crop to existing confirmed labels'])
-    if mode.startswith('Add crop'):
+    mode=st.radio('Review mode',['Add a new labeled interval','Add crop to existing confirmed labels','Correct an existing interval'])
+    if mode.startswith('Correct'):
+        if not rows:st.info('No confirmed intervals to correct.');st.stop()
+        original=st.selectbox('Interval to correct',rows,format_func=lambda r:f"{r['source']} | {r['start_second']:.1f}–{r['end_second']:.1f}s | {r['behavior']}")
+        try:sample=c.resolve_sample(catalog,original)
+        except Exception as e:st.error(str(e));st.stop()
+        st.video(sample['local_clip'])
+        st.caption('Use seconds from the start of the parent clip. Select only a section with the labeled behavior continuously visible. The old interval will remain in history and stop counting in current tables.')
+        low=float(original['start_second']-sample['start_second']);high=float(original['end_second']-sample['start_second'])
+        start,end=st.slider('Corrected section — seconds from clip start',low,high,(low,high),.25,key='correct_'+str(c.key(original)))
+        st.write(f"New source-video interval: {sample['start_second']+start:.2f}–{sample['start_second']+end:.2f}s · {end-start:.2f} seconds")
+        roi=roi_controls(sample,'correct_crop_'+str(c.key(original)),show_video=False,initial=original.get('roi')) if original['behavior'] in c.ACTIVITY else None
+        if st.button('Save corrected interval'):
+            try:
+                c.correct_interval(workspace,original,sample['start_second']+start,sample['start_second']+end,roi)
+                st.success('Correction saved; old annotation retained as history. Retrain the pilot after all corrections.');st.rerun()
+            except Exception as e:st.error(str(e))
+    elif mode.startswith('Add crop'):
         choices=[r for r in rows if r['behavior'] in c.ACTIVITY]
         if not choices:st.info('Import confirmed labels in step 1 first.');st.stop()
         selected=st.selectbox('Confirmed interval',choices,format_func=lambda r:f"{r['source']} | {r['start_second']:.1f}–{r['end_second']:.1f}s | {r['behavior']}")
@@ -101,7 +118,10 @@ elif page.startswith('3'):
             st.success('Actual training finished: '+str(folder));st.json(report)
         except Exception as e:st.error(str(e))
     for p in sorted((workspace/'phase2').glob('pilot_*/TRAINING_REPORT.json'),reverse=True)[:3]:
-        with st.expander(p.parent.name):st.json(json.loads(p.read_text()))
+        with st.expander(p.parent.name):
+            report=json.loads(p.read_text())
+            if report.get('annotation_signature')!=c.annotation_signature(rows):st.warning('Historical model: annotations have changed, or this older model has no dataset signature. Retrain before using proposals.')
+            st.json(report)
 elif page.startswith('4'):
     st.subheader('Confirmed observations — not whole-night percentages')
     if not rows:st.info('Import confirmed labels in step 1.');st.stop()
@@ -118,7 +138,12 @@ elif page.startswith('4'):
         folder=c.write_report(workspace,rows);b=io.BytesIO()
         with zipfile.ZipFile(b,'w',zipfile.ZIP_DEFLATED) as z:
             for p in folder.iterdir():z.write(p,p.name)
-            for p in (workspace/'phase2').glob('pilot_*/TRAINING_REPORT.json'):z.write(p,p.parent.name+'/'+p.name)
+            training_history=[]
+            for p in (workspace/'phase2').glob('pilot_*/TRAINING_REPORT.json'):
+                z.write(p,p.parent.name+'/'+p.name)
+                report=json.loads(p.read_text())
+                training_history.append(dict(run=p.parent.name,matches_current_annotations=report.get('annotation_signature')==c.annotation_signature(rows)))
+            z.writestr('TRAINING_HISTORY_STATUS.json',json.dumps(training_history,indent=2))
             # Redacted annotation export contains filenames, not local paths.
             z.writestr('confirmed_annotations.json',json.dumps(dict(observations=rows),ensure_ascii=False,indent=2))
         st.download_button('Download PHASE2_RESULTS.zip',b.getvalue(),file_name='PHASE2_RESULTS.zip',mime='application/zip')
