@@ -1,6 +1,7 @@
 .venv/
 .yolo_venv/
 .phase2_venv/
+.allvideo_venv/
 workspace/
 training/
 test_history/
@@ -16,3 +17,5 @@ __pycache__/
 CMZ_REVIEW*.zip
 *_CONFIRMED.json
 GPU_INFO.txt
+ALL_VIDEO_GPU_INFO.txt
+
