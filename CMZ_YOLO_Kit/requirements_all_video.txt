@@ -1,0 +1,10 @@
+streamlit>=1.40,<2
+numpy>=1.26,<3
+opencv-python>=4.10,<5
+pillow>=10,<13
+pandas>=2.2,<4
+scikit-learn>=1.5,<2
+joblib>=1.4,<2
+megadetector
+psutil>=5,<8
+imageio-ffmpeg>=0.5,<1
