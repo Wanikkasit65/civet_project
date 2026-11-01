@@ -1,0 +1,13 @@
+# Compatible import of the classic YOLOv5 checkpoint requires pkg_resources.
+setuptools<81
+megadetector==10.0.28
+ultralytics-yolov5==0.1.1
+opencv-python-headless>=4.10
+imageio-ffmpeg>=0.5
+scikit-learn>=1.5
+joblib>=1.4
+numpy>=1.26
+torch>=2.6
+torchvision>=0.21
+matplotlib>=3.8
+pandas>=2.2

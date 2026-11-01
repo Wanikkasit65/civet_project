@@ -1,0 +1,325 @@
+{
+  "scope": "Timestamp and previously confirmed clip audit, not new labels or model accuracy.",
+  "original_run": "E:\\mod stardewS\\CMZ\\CMZ_YOLO_Kit\\workspace\\all_video_runs\\full_20261101_153841_fd2014",
+  "originals_modified": false,
+  "source_probes": [
+    {
+      "source": "A01_20260405000000.mp4",
+      "opencv_inventory_seconds": "4432.0",
+      "returncode": 0,
+      "duration_seconds": 4432.0
+    }
+  ],
+  "previews": [
+    {
+      "file": "A01_pts_0.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 1.5,
+      "source": "A01_20260405000000.mp4",
+      "timing_method": "FFmpeg presentation timestamps",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "A01_pts_1114.mp4",
+      "requested_start_second": 1114.0,
+      "requested_duration": 1.5,
+      "source": "A01_20260405000000.mp4",
+      "timing_method": "FFmpeg presentation timestamps",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "A01_pts_2216.mp4",
+      "requested_start_second": 2216.0,
+      "requested_duration": 1.5,
+      "source": "A01_20260405000000.mp4",
+      "timing_method": "FFmpeg presentation timestamps",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "A01_pts_4430.mp4",
+      "requested_start_second": 4430.0,
+      "requested_duration": 1.5,
+      "source": "A01_20260405000000.mp4",
+      "timing_method": "FFmpeg presentation timestamps",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_00_Feeding.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 10.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 5720.0,
+        "end_second": 5730.0,
+        "behavior": "Feeding",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          0.85,
+          0.98
+        ],
+        "event_group": "A03_20260405140327_food_event",
+        "note": "",
+        "id": "meal_0034"
+      },
+      "parent_sample_start": 5720,
+      "parent_sample_end": 5730,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_01_Feeding.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 10.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 5740.0,
+        "end_second": 5750.0,
+        "behavior": "Feeding",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          0.85,
+          0.98
+        ],
+        "event_group": "A03_20260405140327_food_event",
+        "note": "",
+        "id": "meal_0036"
+      },
+      "parent_sample_start": 5740,
+      "parent_sample_end": 5750,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_02_Walking.mp4",
+      "requested_start_second": 4.0,
+      "requested_duration": 2.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 5985.5,
+        "end_second": 5987.5,
+        "behavior": "Walking",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          1.0,
+          0.98
+        ],
+        "event_group": null,
+        "note": "",
+        "id": "263dd6e441b5"
+      },
+      "parent_sample_start": 5981.5,
+      "parent_sample_end": 5991.5,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_03_Feeding.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 10.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 6000.0,
+        "end_second": 6010.0,
+        "behavior": "Feeding",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          0.85,
+          0.98
+        ],
+        "event_group": "A03_20260405140327_food_event",
+        "note": "",
+        "id": "meal_0062"
+      },
+      "parent_sample_start": 6000,
+      "parent_sample_end": 6010,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_04_Feeding.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 10.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 6020.0,
+        "end_second": 6030.0,
+        "behavior": "Feeding",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          0.85,
+          0.98
+        ],
+        "event_group": "A03_20260405140327_food_event",
+        "note": "",
+        "id": "meal_0064"
+      },
+      "parent_sample_start": 6020,
+      "parent_sample_end": 6030,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_05_Walking.mp4",
+      "requested_start_second": 1.0,
+      "requested_duration": 2.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 6073.5,
+        "end_second": 6075.5,
+        "behavior": "Walking",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          0.98,
+          0.98
+        ],
+        "event_group": null,
+        "note": "",
+        "id": "afe58986fb0a"
+      },
+      "parent_sample_start": 6072.5,
+      "parent_sample_end": 6082.5,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_06_Feeding.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 10.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 6360.0,
+        "end_second": 6370.0,
+        "behavior": "Feeding",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          0.85,
+          0.98
+        ],
+        "event_group": "A03_20260405140327_food_event",
+        "note": "",
+        "id": "meal_0098"
+      },
+      "parent_sample_start": 6360,
+      "parent_sample_end": 6370,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_07_Feeding.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 10.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 6440.0,
+        "end_second": 6450.0,
+        "behavior": "Feeding",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.25,
+          0.85,
+          0.98
+        ],
+        "event_group": "A03_20260405140327_food_event",
+        "note": "",
+        "id": "meal_0106"
+      },
+      "parent_sample_start": 6440,
+      "parent_sample_end": 6450,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "label_08_Walking.mp4",
+      "requested_start_second": 0.0,
+      "requested_duration": 10.0,
+      "annotation": {
+        "source": "A03_20260405140327.mp4",
+        "start_second": 6622.5,
+        "end_second": 6632.5,
+        "behavior": "Walking",
+        "label_source": "human_review",
+        "human_confirmed": true,
+        "roi": [
+          0.15,
+          0.095,
+          0.905,
+          0.98
+        ],
+        "event_group": null,
+        "note": "",
+        "id": "c0a19f8787be"
+      },
+      "parent_sample_start": 6622.5,
+      "parent_sample_end": 6632.5,
+      "timing_method": "FFmpeg within existing human-reviewed clip; original source offset remains unverified",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "prior_walking_pts_5632_5.mp4",
+      "requested_start_second": 5632.5,
+      "requested_duration": 10.0,
+      "source": "A03_20260405000000.mp4",
+      "expected_from_previous_chat": "Walking",
+      "caution": "Prior offsets used a different decoder; verify content before treating this as a reference.",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "prior_walking_pts_5806_5.mp4",
+      "requested_start_second": 5806.5,
+      "requested_duration": 10.0,
+      "source": "A03_20260405000000.mp4",
+      "expected_from_previous_chat": "Walking",
+      "caution": "Prior offsets used a different decoder; verify content before treating this as a reference.",
+      "okay": true,
+      "returncode": 0
+    },
+    {
+      "file": "prior_walking_pts_12558_5.mp4",
+      "requested_start_second": 12558.5,
+      "requested_duration": 10.0,
+      "source": "A03_20260405000000.mp4",
+      "expected_from_previous_chat": "Walking",
+      "caution": "Prior offsets used a different decoder; verify content before treating this as a reference.",
+      "okay": true,
+      "returncode": 0
+    }
+  ],
+  "errors": []
+}
