@@ -1,0 +1,10 @@
+{
+  "training_segments": 37,
+  "training_class_counts": {
+    "Feeding": 30,
+    "Walking": 7
+  },
+  "independent_test_segments": [],
+  "independent_test_metrics": null,
+  "reason": "No independent reference labels. Segments share source events."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "camera_windows": 1319,
+  "unique_videos": 31,
+  "fused_times": 348,
+  "hourly_bins": 29,
+  "fused_counts": {
+    "Unknown": 286,
+    "Walking": 53,
+    "Feeding": 9
+  },
+  "possible_shelter_points": 198,
+  "scope": "Data integrity and arithmetic checks, not behavior accuracy"
+}

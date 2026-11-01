@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "elapsed_seconds": 227.19224225399995,
+  "planned_windows": 77,
+  "processed_windows": 77,
+  "errors": 0,
+  "detector": "MegaDetector V5A (YOLOv5)",
+  "detector_sha256": "94e88fe97c8050f2e3d0cc4cb4f64729d639d74312dcbe2f74f8eecd3b01b276",
+  "image_size": 640,
+  "animal_threshold": 0.4,
+  "device": "cpu",
+  "behavior_counts_by_cohort": {
+    "additional_systematic_windows": {
+      "Unknown": 24
+    },
+    "saved_convenience_audit": {
+      "Unknown": 53
+    }
+  },
+  "motion_counts": {
+    "Unknown": 76,
+    "Moving proposal": 1
+  },
+  "detected_frames": 10,
+  "detector_frames": 548,
+  "independent_accuracy": null,
+  "human_review_required_to_run": false,
+  "notes": [
+    "All labels are automated proposals.",
+    "Convenience audit clips and extra systematic windows are separate from the historical random-sample totals.",
+    "An animal detection cannot establish feeding, sleep, species or welfare.",
+    "Bounding-box displacement is a perspective-dependent motion proxy.",
+    "Stationary proposal is not observed rest or sleep.",
+    "Additional windows use 640-pixel detection, not the previous detector resolution.",
+    "Original annotation offsets remain unverified; reviewed clip content is retained.",
+    "RF predictions recomputed on two-second segments within longer tracking windows. Audit clips can be truncated to 1.75s by prior export; at least five frames are required."
+  ],
+  "rf_temporal_window_seconds": 2
+}

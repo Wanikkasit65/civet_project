@@ -1,0 +1,9 @@
+﻿id,requirement_or_phase1_plan,status,slide,evidence,qualification
+R1,Train selected suitable data,Implemented pilot,6,historical_results/BATCH_TRAINING_REPORT.json,9 reviewed clips;37 segments;two classes
+R2,Explain AI/image model,Documented,5-7,../../CMZ_YOLO_Kit/AUTO_EVIDENCE_METHOD.md,Pretrained detector plus trained RF
+R3,Design/evaluate Active-Inactive output,Partially demonstrated,9-13,historical_results/FUSED_SAMPLED_TIMES.csv,Active proposals available; verifiedInactive unavailable
+R4,Provide source/annotation link,Packaged,14,ANNOTATION_REGISTER.csv,Historical original offsets remain unverified
+P1-A,Behavior versus observation conditions,Implemented,"3,9",historical_results/RESULT_SCOPE.json,Unknown does not mean inactive
+P1-B,Heatmap and room use,Partial,12,Detected_Position_Density.png,Image-plane detections;no validated room occupancy
+P1-C,Continuous activity budget,Unavailable,"9,15",historical_results/RESULT_SCOPE.json,No interpolation between samples
+E1,Independent behavior accuracy,Unavailable,13,preflight_evidence/REPLAY_WALKING_CHECKS.json,Development replays are not independent tests

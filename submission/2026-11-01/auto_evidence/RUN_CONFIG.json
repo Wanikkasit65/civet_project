@@ -1,0 +1,7 @@
+{
+  "detector_sha256": "94e88fe97c8050f2e3d0cc4cb4f64729d639d74312dcbe2f74f8eecd3b01b276",
+  "image_size": 640,
+  "threshold": 0.4,
+  "interval": 30.0,
+  "window": 8.0
+}

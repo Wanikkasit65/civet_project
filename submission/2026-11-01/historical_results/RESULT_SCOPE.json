@@ -1,0 +1,35 @@
+{
+  "method": "One reproducible random 2-second window per 5-minute stratum, shared nominal times across cameras.",
+  "unique_videos": 31,
+  "videos_inspected": 31,
+  "full_video_camera_hours": 109.841925,
+  "windows_processed": 1319,
+  "sampled_camera_seconds": 2638,
+  "sampling_interval_seconds": 300,
+  "whole_video_dense_analysis": false,
+  "model_outputs_are_unvalidated": true,
+  "unsupported_behaviors": [
+    "Resting",
+    "Sleeping"
+  ],
+  "clocks_fully_verified": false,
+  "scope": "Percentages describe sampled points, not fully observed whole-night durations.",
+  "shelter_rule": "Only a conditional assumption: all four cameras supply a decoded window at the same nominal filename-clock time and no animal proposal occurs at either endpoint. Missing cameras, decode errors and incomplete detections never qualify.",
+  "limitations": [
+    "Short behaviors can fall between samples.",
+    "Animal detector misses can create false shelter assumptions.",
+    "Camera clock alignment has only been spot-checked, not verified throughout every source file.",
+    "Overlapping camera records are fused once per nominal time. Conflicting behavior proposals become Unknown.",
+    "Midpoint-only fallback audits are excluded from random-sample statistics.",
+    "Two-class motion model has no independent multi-class accuracy estimate. Unknown is not observed rest or sleep."
+  ],
+  "state": {
+    "status": "complete",
+    "completed_windows": 1319,
+    "total_windows": 1319,
+    "elapsed_seconds": 1401.4220000000005,
+    "estimated_remaining_minutes": 0.0,
+    "current_file": "A04_20260405222742.mp4",
+    "updated_utc": "2026-11-01T11:49:43.135681+00:00"
+  }
+}

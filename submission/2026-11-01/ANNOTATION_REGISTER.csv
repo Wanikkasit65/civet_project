@@ -1,0 +1,10 @@
+﻿source,historical_start_second,historical_end_second,behavior,label_source,human_confirmed_clip_content,original_source_offset_verified,reviewed_clip,timing_caveat
+A03_20260405140327.mp4,5720.0,5730.0,Feeding,human_review,True,False,label_00_Feeding.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,5740.0,5750.0,Feeding,human_review,True,False,label_01_Feeding.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,5985.5,5987.5,Walking,human_review,True,False,label_02_Walking.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,6000.0,6010.0,Feeding,human_review,True,False,label_03_Feeding.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,6020.0,6030.0,Feeding,human_review,True,False,label_04_Feeding.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,6073.5,6075.5,Walking,human_review,True,False,label_05_Walking.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,6360.0,6370.0,Feeding,human_review,True,False,label_06_Feeding.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,6440.0,6450.0,Feeding,human_review,True,False,label_07_Feeding.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified
+A03_20260405140327.mp4,6622.5,6632.5,Walking,human_review,True,False,label_08_Walking.mp4,FFmpeg within existing human-reviewed clip; original source offset remains unverified

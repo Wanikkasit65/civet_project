@@ -1,0 +1,372 @@
+[
+  {
+    "parent_annotation": 0,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5720.0,
+    "local_clip_start": 0.0,
+    "local_clip_end": 2.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 0,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5720.0,
+    "local_clip_start": 2.0,
+    "local_clip_end": 4.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 0,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5720.0,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 0,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5720.0,
+    "local_clip_start": 6.0,
+    "local_clip_end": 8.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 0,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5720.0,
+    "local_clip_start": 8.0,
+    "local_clip_end": 10.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 1,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5740.0,
+    "local_clip_start": 0.0,
+    "local_clip_end": 2.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 1,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5740.0,
+    "local_clip_start": 2.0,
+    "local_clip_end": 4.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 1,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5740.0,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 1,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5740.0,
+    "local_clip_start": 6.0,
+    "local_clip_end": 8.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 1,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5740.0,
+    "local_clip_start": 8.0,
+    "local_clip_end": 10.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 2,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 5985.5,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Walking",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 3,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6000.0,
+    "local_clip_start": 0.0,
+    "local_clip_end": 2.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 3,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6000.0,
+    "local_clip_start": 2.0,
+    "local_clip_end": 4.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 3,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6000.0,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 3,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6000.0,
+    "local_clip_start": 6.0,
+    "local_clip_end": 8.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 3,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6000.0,
+    "local_clip_start": 8.0,
+    "local_clip_end": 10.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 4,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6020.0,
+    "local_clip_start": 0.0,
+    "local_clip_end": 2.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 4,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6020.0,
+    "local_clip_start": 2.0,
+    "local_clip_end": 4.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 4,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6020.0,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 4,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6020.0,
+    "local_clip_start": 6.0,
+    "local_clip_end": 8.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 4,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6020.0,
+    "local_clip_start": 8.0,
+    "local_clip_end": 10.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 5,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6073.5,
+    "local_clip_start": 1.0,
+    "local_clip_end": 3.0,
+    "behavior": "Walking",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 6,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6360.0,
+    "local_clip_start": 0.0,
+    "local_clip_end": 2.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 6,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6360.0,
+    "local_clip_start": 2.0,
+    "local_clip_end": 4.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 6,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6360.0,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 6,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6360.0,
+    "local_clip_start": 6.0,
+    "local_clip_end": 8.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 6,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6360.0,
+    "local_clip_start": 8.0,
+    "local_clip_end": 10.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 7,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6440.0,
+    "local_clip_start": 0.0,
+    "local_clip_end": 2.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 7,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6440.0,
+    "local_clip_start": 2.0,
+    "local_clip_end": 4.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 7,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6440.0,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 7,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6440.0,
+    "local_clip_start": 6.0,
+    "local_clip_end": 8.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 7,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6440.0,
+    "local_clip_start": 8.0,
+    "local_clip_end": 10.0,
+    "behavior": "Feeding",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 8,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6622.5,
+    "local_clip_start": 0.0,
+    "local_clip_end": 2.0,
+    "behavior": "Walking",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 8,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6622.5,
+    "local_clip_start": 2.0,
+    "local_clip_end": 4.0,
+    "behavior": "Walking",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 8,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6622.5,
+    "local_clip_start": 4.0,
+    "local_clip_end": 6.0,
+    "behavior": "Walking",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 8,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6622.5,
+    "local_clip_start": 6.0,
+    "local_clip_end": 8.0,
+    "behavior": "Walking",
+    "source_time_verified": false,
+    "used": true
+  },
+  {
+    "parent_annotation": 8,
+    "source": "A03_20260405140327.mp4",
+    "nominal_source_start": 6622.5,
+    "local_clip_start": 8.0,
+    "local_clip_end": 10.0,
+    "behavior": "Walking",
+    "source_time_verified": false,
+    "used": true
+  }
+]

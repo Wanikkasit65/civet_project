@@ -1,0 +1,232 @@
+{
+  "scope": "Previously exposed one-class development checks; not fresh independent evaluation.",
+  "checks": [
+    {
+      "source": "A03_20260405000000.mp4",
+      "start_second": 5632.5,
+      "end_second": 5642.5,
+      "segments": [
+        {
+          "start_second": 5632.5,
+          "end_second": 5634.5,
+          "expected": "Walking",
+          "proposed_behavior": "Unknown",
+          "model_score": null,
+          "animal_score": 0.0,
+          "status": "no_animal_proposal_at_either_endpoint",
+          "roi": null
+        },
+        {
+          "start_second": 5634.5,
+          "end_second": 5636.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 1.0,
+          "animal_score": 0.842,
+          "status": "animal_proposal",
+          "roi": [
+            0.5335,
+            0.5722,
+            0.8702000000000001,
+            0.7569
+          ]
+        },
+        {
+          "start_second": 5636.5,
+          "end_second": 5638.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 1.0,
+          "animal_score": 0.758,
+          "status": "animal_proposal",
+          "roi": [
+            0.357,
+            0.4458,
+            0.7749,
+            0.7374
+          ]
+        },
+        {
+          "start_second": 5638.5,
+          "end_second": 5640.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 0.9963333333333334,
+          "animal_score": 0.472,
+          "status": "animal_proposal",
+          "roi": [
+            0.2617,
+            0.4277,
+            0.5398,
+            0.6665
+          ]
+        },
+        {
+          "start_second": 5640.5,
+          "end_second": 5642.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 0.8394583333333333,
+          "animal_score": 0.567,
+          "status": "animal_proposal",
+          "roi": [
+            0.1968,
+            0.3652,
+            0.3577,
+            0.5847
+          ]
+        }
+      ],
+      "walking_seconds": 8.0,
+      "feeding_seconds": 0.0
+    },
+    {
+      "source": "A03_20260405000000.mp4",
+      "start_second": 5806.5,
+      "end_second": 5816.5,
+      "segments": [
+        {
+          "start_second": 5806.5,
+          "end_second": 5808.5,
+          "expected": "Walking",
+          "proposed_behavior": "Unknown",
+          "model_score": null,
+          "animal_score": 0.406,
+          "status": "animal_detection_incomplete",
+          "roi": null
+        },
+        {
+          "start_second": 5808.5,
+          "end_second": 5810.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 1.0,
+          "animal_score": 0.81,
+          "status": "animal_proposal",
+          "roi": [
+            0.5742,
+            0.4916,
+            0.8819,
+            0.6957
+          ]
+        },
+        {
+          "start_second": 5810.5,
+          "end_second": 5812.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 1.0,
+          "animal_score": 0.908,
+          "status": "animal_proposal",
+          "roi": [
+            0.3687,
+            0.5111,
+            0.8373999999999999,
+            0.6929000000000001
+          ]
+        },
+        {
+          "start_second": 5812.5,
+          "end_second": 5814.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 1.0,
+          "animal_score": 0.582,
+          "status": "animal_proposal",
+          "roi": [
+            0.2796,
+            0.4444,
+            0.5546,
+            0.6916
+          ]
+        },
+        {
+          "start_second": 5814.5,
+          "end_second": 5816.5,
+          "expected": "Walking",
+          "proposed_behavior": "Unknown",
+          "model_score": null,
+          "animal_score": 0.857,
+          "status": "animal_detection_incomplete",
+          "roi": null
+        }
+      ],
+      "walking_seconds": 6.0,
+      "feeding_seconds": 0.0
+    },
+    {
+      "source": "A03_20260405000000.mp4",
+      "start_second": 12558.5,
+      "end_second": 12568.5,
+      "segments": [
+        {
+          "start_second": 12558.5,
+          "end_second": 12560.5,
+          "expected": "Walking",
+          "proposed_behavior": "Unknown",
+          "model_score": null,
+          "animal_score": 0.0,
+          "status": "no_animal_proposal_at_either_endpoint",
+          "roi": null
+        },
+        {
+          "start_second": 12560.5,
+          "end_second": 12562.5,
+          "expected": "Walking",
+          "proposed_behavior": "Unknown",
+          "model_score": null,
+          "animal_score": 0.928,
+          "status": "animal_detection_incomplete",
+          "roi": null
+        },
+        {
+          "start_second": 12562.5,
+          "end_second": 12564.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 1.0,
+          "animal_score": 0.908,
+          "status": "animal_proposal",
+          "roi": [
+            0.3585,
+            0.4458,
+            0.7937,
+            0.7138
+          ]
+        },
+        {
+          "start_second": 12564.5,
+          "end_second": 12566.5,
+          "expected": "Walking",
+          "proposed_behavior": "Walking",
+          "model_score": 0.98925,
+          "animal_score": 0.78,
+          "status": "animal_proposal",
+          "roi": [
+            0.2671,
+            0.4194,
+            0.5343,
+            0.6666
+          ]
+        },
+        {
+          "start_second": 12566.5,
+          "end_second": 12568.5,
+          "expected": "Walking",
+          "proposed_behavior": "Unknown",
+          "model_score": null,
+          "animal_score": 0.403,
+          "status": "animal_detection_incomplete",
+          "roi": null
+        }
+      ],
+      "walking_seconds": 4.0,
+      "feeding_seconds": 0.0
+    }
+  ],
+  "basic_engineering_gate_passed": true,
+  "walking_seconds": 18.0,
+  "processed_seconds": 30.0,
+  "gate_rule": "At least 28s decoded; at least half proposed Walking; Walking exceeds Feeding in each clip.",
+  "overall_accuracy": null
+}

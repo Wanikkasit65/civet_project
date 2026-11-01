@@ -1,0 +1,6 @@
+{
+  "file": "reconstructed_behavior.joblib",
+  "sha256": "7d943f1a523104d7e41822c2fe6da6d0c9a1ba236d2fcbd98a0750c4b62ead5a",
+  "bytes": 156409,
+  "scope": "Reconstructed model from encoded review clips. Distinct from historical saved model."
+}

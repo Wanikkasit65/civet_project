@@ -1,0 +1,40 @@
+{
+  "pipeline_version": "cmz-pts-full-enclosure-v1",
+  "model": "RandomForest + Farneback full-enclosure motion features",
+  "detector": "Pretrained MegaDetector V5A animal category, presence gate only",
+  "spatial_representation": "Full frame resized to 96x96 in both training and inference; no detector crop used for features",
+  "source_annotation_intervals": 9,
+  "derived_training_segments": 37,
+  "class_counts": {
+    "Feeding": 30,
+    "Walking": 7
+  },
+  "supported_classes": [
+    "Feeding",
+    "Walking"
+  ],
+  "unsupported_classes": [
+    "Resting",
+    "Sleeping"
+  ],
+  "annotation_signature": "dbc42eead27834d1a35b9287839bca12f670481b5599c0f23efec338c4d410f1",
+  "evaluation": null,
+  "whole_period_behavior_accuracy": null,
+  "window_seconds": 2.0,
+  "development_leave_one_annotation_out": {
+    "Feeding": {
+      "correct": 29,
+      "total": 30
+    },
+    "Walking": {
+      "correct": 5,
+      "total": 7
+    }
+  },
+  "notes": [
+    "Adjacent intervals and segments share recording events; leave-one-annotation-out is a development diagnostic, NOT independent test accuracy.",
+    "Human confirmation refers to existing reviewed clip content. Historical source offsets require separate timestamp mapping.",
+    "Full-enclosure motion can confuse feeding with stillness, grooming, lighting and background movement.",
+    "Detection is not species identification. All behavior outputs remain unvalidated model proposals."
+  ]
+}

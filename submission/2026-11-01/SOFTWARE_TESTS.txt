@@ -1,0 +1,9 @@
+CMZ software verification
+
+Command: python -m unittest discover -s CMZ_YOLO_Kit -p test_*.py
+
+Ran 34 tests in 14.161s
+
+OK
+
+All 34 software tests passed. Runtime-path warnings were omitted from this public copy. These tests check implementation behavior, not independent civet-behavior accuracy.

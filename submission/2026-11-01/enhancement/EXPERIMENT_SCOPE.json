@@ -1,0 +1,17 @@
+{
+  "images": 12,
+  "inference_calls": 48,
+  "elapsed_seconds": 196.90182056400005,
+  "detector_sha256": "94e88fe97c8050f2e3d0cc4cb4f64729d639d74312dcbe2f74f8eecd3b01b276",
+  "selection": "Four saved frames per historical proposal stratum, fixed SHA-256 filename ordering",
+  "purpose": "Exploratory paired sensitivity check, not independent accuracy evaluation",
+  "modifies_originals": false,
+  "notes": [
+    "Higher detector scores can include false positives.",
+    "Upscaling does not restore missing image detail.",
+    "Contrast enhancement can amplify mesh and noise.",
+    "Historical results are unchanged.",
+    "No automatic adoption of the best-looking score.",
+    "Saved audit stills contain pre-existing red ROI outlines. Raw means no additional photometric change; this is not clean-original accuracy evaluation."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "model": "RandomForest",
+  "n_estimators": 200,
+  "max_depth": 8,
+  "min_samples_leaf": 2,
+  "class_weight": "balanced",
+  "random_state": 42,
+  "features": 18,
+  "frame_size": [
+    96,
+    96
+  ],
+  "spatial_representation": "full frame",
+  "training_segments": 37,
+  "class_counts": {
+    "Feeding": 30,
+    "Walking": 7
+  },
+  "independent_test_metrics": null,
+  "model_scope": "Reconstructed from encoded review clips. Distinct from historical saved model.",
+  "provenance": "Existing clip labels retained. Original long-video offsets unverified."
+}

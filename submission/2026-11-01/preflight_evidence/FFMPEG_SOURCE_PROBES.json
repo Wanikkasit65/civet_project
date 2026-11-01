@@ -1,0 +1,312 @@
+[
+  {
+    "source": "A01_20260405185535.mp4",
+    "duration": 18231.86,
+    "duration_seconds": 18231.86,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A02_20260405193316.mp4",
+    "duration": 22552.25,
+    "duration_seconds": 22552.25,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A03_20260405105417.mp4",
+    "duration": 719.07,
+    "duration_seconds": 719.07,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405000000.mp4",
+    "duration": 15470.81,
+    "duration_seconds": 15470.81,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405235925.mp4",
+    "duration": 17485.88,
+    "duration_seconds": 17485.88,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405124007.mp4",
+    "duration": 7982.91,
+    "duration_seconds": 7982.91,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A03_20260405000000.mp4",
+    "duration": 25015.61,
+    "duration_seconds": 25015.61,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A03_20260405110705.mp4",
+    "duration": 10581.73,
+    "duration_seconds": 10581.73,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A03_20260405140327.mp4",
+    "duration": 15279.76,
+    "duration_seconds": 15279.76,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405222742.mp4",
+    "duration": 23623.69,
+    "duration_seconds": 23623.69,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405122444.mp4",
+    "duration": 10324.95,
+    "duration_seconds": 10324.95,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405151649.mp4",
+    "duration": 13125.91,
+    "duration_seconds": 13125.91,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A02_20260405124127.mp4",
+    "duration": 9674.12,
+    "duration_seconds": 9674.12,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405145310.mp4",
+    "duration": 8129.91,
+    "duration_seconds": 8129.91,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A02_20260405000000.mp4",
+    "duration": 21326.25,
+    "duration_seconds": 21326.25,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A02_20260405152241.mp4",
+    "duration": 15035.17,
+    "duration_seconds": 15035.17,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A03_20260405065655.mp4",
+    "duration": 14242.79,
+    "duration_seconds": 14242.79,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A03_20260405181806.mp4",
+    "duration": 28452.53,
+    "duration_seconds": 28452.53,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405011351.mp4",
+    "duration": 17986.88,
+    "duration_seconds": 17986.88,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405041750.mp4",
+    "duration": 14507.82,
+    "duration_seconds": 14507.82,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405081938.mp4",
+    "duration": 7686.92,
+    "duration_seconds": 7686.92,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405170839.mp4",
+    "duration": 19143.74,
+    "duration_seconds": 19143.74,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405061338.mp4",
+    "duration": 12908.92,
+    "duration_seconds": 12908.92,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A02_20260405055526.mp4",
+    "duration": 14164.18,
+    "duration_seconds": 14164.18,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405000000.mp4",
+    "duration": 4432.0,
+    "duration_seconds": 4432.0,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405094847.mp4",
+    "duration": 4649.08,
+    "duration_seconds": 4649.08,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A01_20260405110705.mp4",
+    "duration": 4659.03,
+    "duration_seconds": 4659.03,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A02_20260405095130.mp4",
+    "duration": 4482.08,
+    "duration_seconds": 4482.08,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405102745.mp4",
+    "duration": 2311.08,
+    "duration_seconds": 2311.08,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A02_20260405110705.mp4",
+    "duration": 5662.05,
+    "duration_seconds": 5662.05,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  },
+  {
+    "source": "A04_20260405110705.mp4",
+    "duration": 5581.95,
+    "duration_seconds": 5581.95,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "timing_method": "FFmpeg demuxer duration and decoded presentation timestamps",
+    "probe_log": "Raw local processing log omitted from the public copy. Structured probe fields are retained."
+  }
+]
