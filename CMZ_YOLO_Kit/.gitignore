@@ -2,6 +2,7 @@
 .yolo_venv/
 .phase2_venv/
 .allvideo_venv/
+.tracking_venv/
 workspace/
 training/
 test_history/
